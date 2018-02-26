@@ -1,5 +1,0 @@
-language: java
-rvm:
- - maven
- - 3.3.9
-
