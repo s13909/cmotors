@@ -1,5 +1,4 @@
 language: java
-rvm:
- - maven
- - 3.3.9
+script:
+ - cd lab01; mvn test
 
