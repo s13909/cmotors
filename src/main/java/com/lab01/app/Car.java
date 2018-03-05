@@ -3,12 +3,12 @@ public class Car
 {
     public static void main( String[] args )
     {
+            int id;
             String make;
             String model;
             String color;
-            int vin;
+            int year;
         
-        Car Fiat = new Car();
  
     }
 }
