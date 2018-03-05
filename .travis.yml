@@ -1,3 +1,3 @@
 language: java
 script:
-- cd world-of-testcraft; mvn test
+- cd cmotors; mvn test
