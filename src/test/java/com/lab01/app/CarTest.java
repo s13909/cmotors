@@ -11,6 +11,6 @@ public class CarTest {
     @Test
     public void createTest() {
         Car car = new Car();
-        assertNotNull(account);
+        assertNotNull(car);
     }
 }

@@ -2,9 +2,8 @@ package com.lab01.app;
 
 public class Car 
 {
-    int id;
-    String make;
-    String model;
-    String color;
-    int year;   
+    public int id;
+    public String make;
+    public String model;
+    public String color;  
 }
