@@ -2,7 +2,31 @@ package com.cmotors.app;
 
 public class Car
 {
-    public int Id;
-    public String Make;
-    public String Model;
+    public int id;
+    public String make;
+    public String model;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String login) {
+        this.make = make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String ) {
+        this.model = model;
+    }
 }
