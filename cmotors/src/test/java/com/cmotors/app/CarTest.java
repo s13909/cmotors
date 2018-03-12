@@ -36,19 +36,23 @@ public class CarTest {
     @Test
     public void deleteCar() {
         Car car = carRepository.getById(1);
+        Car carToTest = carRepository.getById(2);
         carRepository.delete(car);
         assertNull(carRepository.getById(car.getId()));
+        assertNotNull(carRepository.getById(carToTest.getId()));
     }
 
     @Test
     public void updateCar() {
         Car car = new Car();
+        Car carToTest = carRepository.getById(2);
         car.setId(1);
         car.setMake("Mazda");
         car.setModel("MX-5 RF");
         int idToUpdate = 1;
         carRepository.update(idToUpdate, car.getId());
         assertEquals(carRepository.getById(idToUpdate).getMake(), carRepository.getById(car.getId()).getMake());
+        assertNotEquals(carToTest.make, carRepository.getById(car.getId()).getMake());
     }
 
     @Before
