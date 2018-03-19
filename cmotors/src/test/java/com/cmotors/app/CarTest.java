@@ -1,29 +1,35 @@
 package com.cmotors.app;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+
 import static org.junit.Assert.*;
 
-import com.cmotors.repository.CarRepository;
-import com.cmotors.repository.CarRepositoryFactory;
+import java.sql.SQLException;
 
+import com.cmotors.repository.*;
+
+import org.junit.After;
 import org.junit.Before;
 
+@RunWith(JUnit4.class)
 public class CarTest {
     CarRepository carRepository;
 
     @Test
-    public void getById() {
+    public void getById() throws SQLException {
         int idToFind = 1;
         assertNotNull(carRepository.getById(idToFind));
     }
 
     @Test
-    public void getAll() {
+    public void getAll() throws SQLException {
         assertNotNull(carRepository.getAll());
     }
 
     @Test
-    public void addCar() {
+    public void addCar() throws SQLException {
         Car car = new Car();
         car.setId(1);
         car.setMake("Mazda");
@@ -34,7 +40,7 @@ public class CarTest {
     }
 
     @Test
-    public void deleteCar() {
+    public void deleteCar() throws SQLException {
         Car car = carRepository.getById(1);
         Car carToTest = carRepository.getById(2);
         carRepository.delete(car);
@@ -43,7 +49,7 @@ public class CarTest {
     }
 
     @Test
-    public void updateCar() {
+    public void updateCar() throws SQLException {
         Car car = new Car();
         Car carToTest = carRepository.getById(2);
         car.setId(1);
@@ -77,5 +83,9 @@ public class CarTest {
         carRepository.add(car1);
         carRepository.add(car2);
         carRepository.add(car3);
+    }
+    @After
+    public void dropRepository() {
+        carRepository.dropRepository();
     }
 }
