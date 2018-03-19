@@ -1,6 +1,6 @@
-package com.worldoftestcraft.repository;
+package com.cmotors.repository;
 
-import com.worldoftestcraft.app.Car;
+import com.cmotors.app.Car;
 
 import java.sql.*;
 import java.util.LinkedList;
