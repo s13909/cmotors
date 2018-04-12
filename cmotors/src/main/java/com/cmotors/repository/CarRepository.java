@@ -19,9 +19,9 @@ public interface CarRepository {
 
 	public List<Car> getAll();
 
-	public void add(Car car);
+	public int add(Car car);
 
-	public void delete(Car car);
+	public int delete(Car car);
 
-	public void update(int oldCarId, int newCarId);
+	public int update(int oldCarId, Car newCar);
 }

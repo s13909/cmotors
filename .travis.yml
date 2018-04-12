@@ -1,3 +1,4 @@
 language: java
 script:
 - cd cmotors; mvn test
+- cd cmotors; bash scripts/server.sh

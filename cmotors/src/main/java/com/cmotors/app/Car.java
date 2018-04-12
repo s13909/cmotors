@@ -18,7 +18,7 @@ public class Car
         return make;
     }
 
-    public void setMake(String login) {
+    public void setMake(String make) {
         this.make = make;
     }
 
