@@ -2,10 +2,13 @@ package com.cmotors.repository;
 
 import com.cmotors.app.Car;
 
+import org.springframework.stereotype.Component;
+
 import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
+@Component
 public class CarRepositoryImpl implements CarRepository {
 
     private Connection connection;
@@ -25,7 +28,10 @@ public class CarRepositoryImpl implements CarRepository {
         setConnection(connection);
     }
 
-    public boolean isDatabaseReady() {
+    public CarRepositoryImpl() {
+	}
+
+	public boolean isDatabaseReady() {
         try {
             ResultSet rs = connection.getMetaData().getTables(null, null, null, null);
             boolean tableExists = false;

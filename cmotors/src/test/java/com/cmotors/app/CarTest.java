@@ -12,7 +12,9 @@ import com.cmotors.repository.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 
+@Ignore
 @RunWith(JUnit4.class)
 public class CarTest {
     CarRepository carRepository;
